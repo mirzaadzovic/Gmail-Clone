@@ -1,0 +1,21 @@
+.emailList {
+  flex: 1;
+  height: 100%;
+}
+.emailList__settings {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--border-bottom-style);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+}
+.emailList__settingsLeft,
+.emailList__settingsRight {
+  color: var(--font-grey-color) !important;
+}
+.emailList__sections {
+  display: flex;
+  border-bottom: 1px solid whitesmoke;
+}

@@ -1,0 +1,19 @@
+.section {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  color: var(--font-grey-color);
+  flex: 0.2;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.section:hover {
+  background-color: var(--hover-grey-color);
+}
+
+.section > h4 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 15px;
+}
