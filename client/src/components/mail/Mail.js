@@ -2,7 +2,11 @@ import React from "react";
 import "./Mail.css";
 
 const Mail = () => {
-  return <div className="mail"></div>;
+  return (
+    <div className="mail">
+      <div className="mail__tols"></div>
+    </div>
+  );
 };
 
 export default Mail;
