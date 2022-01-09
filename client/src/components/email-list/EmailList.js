@@ -14,8 +14,11 @@ import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import "./EmailList.css";
 import Section from "../section/Section";
 import EmailRow from "../email-row/EmailRow";
+import { useSelector } from "react-redux";
+import { selectEmailList } from "../../reducers/mailSlice";
 
 const EmailList = () => {
+  const emailList = useSelector(selectEmailList);
   return (
     <div className="emailList">
       <div className="emailList__settings">
@@ -52,13 +55,13 @@ const EmailList = () => {
           Icon={InboxIcon}
           title={"Primary"}
           color={"--red-color"}
-          selected={false}
+          selected={true}
         />
         <Section
           Icon={PeopleIcon}
           title={"Social"}
           color={"--blue-color"}
-          selected={true}
+          selected={false}
         />
         <Section
           Icon={LocalOfferIcon}
@@ -69,22 +72,16 @@ const EmailList = () => {
       </div>
 
       <div className="emailList__list">
-        <EmailRow
-          id={1}
-          title={"Youtube"}
-          subject="Obrisan ti kanal"
-          description={
-            "Obrisali smo ti kanal jer je krindž, ti si jedan debil teški i smrad"
-          }
-          time={"10:23 PM"}
-        />
-        <EmailRow
-          id={1}
-          title={"SIPA"}
-          subject="Droga"
-          description={"Đe je droga??"}
-          time={"13:12 AM"}
-        />
+        {emailList.map((email) => (
+          <EmailRow
+            key={email.id}
+            id={email.id}
+            title={email.title}
+            subject={email.subject}
+            description={email.description}
+            time={email.time}
+          />
+        ))}
       </div>
     </div>
   );

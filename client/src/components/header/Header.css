@@ -5,6 +5,10 @@
   border-bottom: var(--border-bottom-style);
   padding: 10px 5px 10px 0px;
   box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
 }
 
 .header__left,

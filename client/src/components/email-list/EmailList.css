@@ -1,6 +1,7 @@
 .emailList {
   flex: 1;
   height: 100%;
+  overflow: scroll;
 }
 .emailList__settings {
   display: flex;
@@ -8,6 +9,7 @@
   border-bottom: var(--border-bottom-style);
   position: sticky;
   top: 0;
+  z-index: 100;
   z-index: 10;
   background-color: white;
 }
@@ -16,6 +18,13 @@
   color: var(--font-grey-color) !important;
 }
 .emailList__sections {
+  position: sticky;
+  top: 0;
+  z-index: 99;
   display: flex;
   border-bottom: 1px solid whitesmoke;
+}
+
+.emailList__list {
+  padding-bottom: 20%;
 }
